@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: hsl(229, 57%, 11%);
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url(/images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50%;
+    z-index: 0;
+}
+
+.container {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.flyo {
+    background-color: hsl(228, 56%, 26%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 40px;
+    width: 350px;
+    height: 200px;
+    border-radius: 5px 100px 5px 5px;
+}
+
+.flyo .icons {
+    display: flex;
+    width: 170px;
+    justify-content: space-between;
+}
+
+.flyo .icons img {
+    padding: 10px;
+    width: 44px;
+    height: 44px;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 10px;
+}
+
+.storage {
+    position: relative;
+    background-color: hsl(228, 56%, 26%);
+    display: flex;
+    flex-direction: column;
+    padding-left: 40px;
+    width: 540px;
+    height: 155px;
+    margin-top: 45px;
+    margin-left: 30px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.storage .square {
+    width: 170px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    top: -50px;
+    margin-right: 40px;
+    background-color: #fff;
+    border-radius: 10px 10px 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.storage .square p {
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.storage .square span {
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    color: gray;
+    letter-spacing: 1px;
+}
+
+.storage .triangle {
+    position: absolute;
+    right: -0.25px;
+    top: 29.5px;
+    margin-right: 40px;
+    background-color: white;
+    width: 22px;
+    height: 22px;
+    clip-path: polygon(0 0, 100% 100%, 100% 0);
+}
+
+.storage .used {
+    margin-bottom: 15px;
+    color: hsl(243, 100%, 93%);
+    font-weight: 400;
+}
+
+.storage .used span {
+    font-weight: 700;
+}
+
+.storage .progressBar {
+    position: relative;
+    height: 20px;
+    width: 100%;
+    background-color: rgb(21, 30, 73);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.storage .progressBar .progress {
+    position: absolute;
+    top: 1.5px;
+    left: 3px;
+    height: 85%;
+    width: 70%;
+    border-radius: 10px;
+    background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+
+.storage .progressBar .progress .progressCircle {
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 100px;
+    background-color: white;
+    right: 0;
+    margin-right: 2px;
+    top: 3px;
+}
+
+.storage .gb {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    font-weight: 700;
+}
+
+.storage .gb p {
+    color: hsl(243, 100%, 93%);
+}
+
+@media all and (max-width:950px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .storage {
+        width: 350px;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+    .storage .used {
+        margin-bottom: 15px;
+        color: hsl(243, 100%, 93%);
+        font-weight: 400;
+    }
+    .storage .square {
+        width: 170px;
+        height: 70px;
+        bottom: -40px;
+        top: unset;
+        right: 59px;
+        border-radius: 10px 10px 10px 10px;
+    }
+    .storage .triangle {
+        display: none;
+    }
+    .storage .used {
+        text-align: center;
+    }
+}
